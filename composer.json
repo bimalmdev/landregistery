@@ -1,0 +1,36 @@
+{
+    "name": "dd/land-registry",
+    "description": "Custom landregirty fetching",
+    "license": "MIT",
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dd\\LandRegistry\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dd\\LandRegistry\\Tests\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dd\\LandRegistry\\ServiceProvider"
+            ],
+            "aliases": {
+                "LandRegistry": "Dd\\LandRegistry\\Facade"
+            }
+        }
+    }
+}
