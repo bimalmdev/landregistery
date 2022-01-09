@@ -1,6 +1,6 @@
 {
     "name": "dd/land-registry",
-    "description": "Custom landregirty fetching",
+    "description": "Laravel package for HM Land registery SOAP API",
     "license": "MIT",
     "require": {
         "php": "^7.4|^8.0",

@@ -2,17 +2,29 @@
 
 This project created for testing purpose. It is not good to use in production server
 
-## Laavel Configuration
+### Install using Composer
 
-convert pfx file to pem format 
-### openssl pkcs12 -in cert_file.pfx -out cert_file.pem
+Add below to composer.josn
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/bimalmdev/landregistery"
+        }
+    ]
 
-In config/app.php providers array add 
-### Dd\LandRegistry\ServiceProvider::class
+call
+    composer require dd/land-registry
+
+### Laravel Configuration
+
+##convert pfx file to pem format 
+    openssl pkcs12 -in cert_file.pfx -out cert_file.pem
+
+##In config/app.php providers array add 
+    Dd\LandRegistry\ServiceProvider::class
 
 ## Usage example
 
-    ```
     $certFile =  Storage::disk('public')->path('cert_file.pem');
     $certPass = "1234";
     
@@ -58,4 +70,3 @@ In config/app.php providers array add
     //call getResponse() for getting response
     $reponse = $test->getResponse();
 
-    ```
